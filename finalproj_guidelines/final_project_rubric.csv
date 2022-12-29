@@ -1,0 +1,35 @@
+Element,Subelement,Points,Things to do,Things to avoid
+Code/repo,Repo organization,5,"- Number scripts or notebooks in the order they're run and with no spaces in filenames (e.g, 00_pulljobsdata, 01_merge, 02...)- number should come at the beginning since github auto-sorts and this way they'll appear consecutively
+- In the README, have a link to each script or notebook and a description of what it takes in (dataset; API key; etc), what it does, and what it outputs (e.g., cleaned data; figures)
+- If the github repo contains code, data, and output, create a ""code"" directory that stores code, a ""data"" directory that stores data, and a ""output"" directory that stores figure pngs or pdfs
+- If the github repo contains code and output but not data, include a link to the dropbox folder storing the data in the github readme","- Code files that are not numbered
+- Readme doesn't explain what each code file means
+- Lack of clarity on where to find data
+- Spaces in filenames, making it hard to interact with them on command line"
+Code/repo,Code,10,"- Define all functions at the top of the notebook or script, or import them from a utils.py script
+- Have each script or notebook correspond to a defined task---eg data pulling; data cleaning; visualization---rather than a single notebook for the whole project
+- Have print statements with diagnostics for rows before and after a merge
+- Other good coding hygiene (comments; put things in functions; avoiding loops with append that adds to runtime; etc)","- Hardcoded path names (e.g., ""/users/rebeccajohnson/mydata"")
+- Hardcoded values (e.g., pulling cols by position rather than by name)
+- Repetitive code that could be parameterized in a function"
+Paper,Introduction/ related work,5,"Motivate the relevance of the topic; no need for an extensive lit review, but in related work section, note how your analysis is extending past work",Presenting your analysis as the first / only analysis of this topic
+Paper,Data,10,"Clearly describe the:
+ - (1) source of the data
+ - (2) time window either in original or that you're examining,
+ - (3) unit of analysis in original data source (e.g., patient, patient + caregiver, patient’s one visit.),
+ - (4) unit of analysis you are using - (5) limitations of the data source- (6) if not already mentioned in limitations, missingness in key data fields","- Vagueness/lack of clarity (e.g., about how repeated measurements over time are treated)
+- Lack of discussion about gaps or limitations in the data"
+Paper,Methods,20,"Clearly describe:
+ - (1) any steps to clean the different data sources (can link to relevant cleaning script(s) in the repo and reference line numbers for details),
+ - (2) any steps to merge the data and what type of join it was (left; inner; etc) and what type of merging strategy was used (e.g., exact match versus fuzzy match; if fuzzy match, what were blocking and fuzzy variables),
+ - (3) define the variables clearly
+ - (4) if a predictive analysis, describe the train-test split and validation procedure clearly,
+ - (5) if an inferential or causal analysis, state clearly the source of causal identification 
+Throughout, if it's easier link to clearly-documented code, either include a code snippet in the paper appendix or link to the relevant script or notebook and note the line numbers
+If methods proceeded sequentially, consider using a flowchart","Similar to above: 
+- Vagueness (e.g., unclear specification of how investigation or violation is defined; unclear specification of merges)
+- Explanation doesn't match what code is actually doing (e.g., you say you're retaining all violations in the data but code drops those without a geocodable-address)"
+Paper,Results: writing,10,Summarize key patterns / interpretation of tables and figures,
+Paper,Results: figures and/or tables,10,"Have at least one table that characterizes the analysis sample (e.g., # of observations; range of years). For all figures/tables, have a clear title and caption so that someone skimming only the figures and tables could understand the main gist of results","- Lack of informative captions on figures or tables
+- Legibility issues"
+Paper,Discussion,2,"Short synopsis of findings, limitations/things to address in future",Failure to note limitations of analysis
