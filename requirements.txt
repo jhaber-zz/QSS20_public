@@ -8,7 +8,7 @@ nltk
 vaderSentiment
 spacy
 gensim
-sklearn
+scikit-learn
 pyLDAvis
 requests
 tweepy
