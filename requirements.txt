@@ -14,5 +14,5 @@ requests
 tweepy
 graphviz
 bs4
-urllib
+urllib3
 mysql-connector-python
