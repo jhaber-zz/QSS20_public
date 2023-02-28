@@ -9,9 +9,11 @@ Code/repo,Repo organization,5,"- Number scripts or notebooks in the order they'r
 Code/repo,Code,10,"- Define all functions at the top of the notebook or script, or import them from a utils.py script
 - Have each script or notebook correspond to a defined task---eg data pulling; data cleaning; visualization---rather than a single notebook for the whole project
 - Have print statements with diagnostics for rows before and after a merge
-- Other good coding hygiene (comments; put things in functions; avoiding loops with append that adds to runtime; etc)","- Hardcoded path names (e.g., ""/users/rebeccajohnson/mydata"")
+- Other good coding hygiene (comments; put things in functions; avoiding loops with append that adds to runtime; etc)
+- Use code and tools/strategies from course content for data processing & analysis (can use R for some viz, but rest should be in Python)","- Hardcoded path names (e.g., ""/users/jhaber/mydata"")
 - Hardcoded values (e.g., pulling cols by position rather than by name)
-- Repetitive code that could be parameterized in a function"
+- Repetitive code that could be parameterized in a function
+- Data processing & analysis in language other than Python (doesn't use course content)"
 Paper,Introduction/ related work,5,"Motivate the relevance of the topic; no need for an extensive lit review, but in related work section, note how your analysis is extending past work",Presenting your analysis as the first / only analysis of this topic
 Paper,Data,10,"Clearly describe the:
  - (1) source of the data
